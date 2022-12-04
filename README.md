@@ -12,11 +12,18 @@
     - Our next step is to point Solana at the devnet cluster. To do this we execute the command `solana config set --url https://api.devnet.solana.com` in the terminal. 
         -  We can now create a ID config file for our wallet by executing `solana-keygen new -o /Users/nickcarp/.config/solana/id.json` in the terminal. 
         -  Finally, we can now fund our wallet though the devnet faucet by running thr command `solana airdrop 1`
-1.  Next we can proceed with writing and deploying the smart contract. You can choose any IDE for this portion, but I chose Visual Studio Code as it is what the vast majority of users are familiar with. With visual studio open, navigate to the home directory and find the `testnet-solana-wallet` folder. 
+1.  Next we can proceed with writing and deploying the smart contract. You can choose any IDE for this portion, but I chose Visual Studio Code as it is what the vast majority of users are familiar with. 
+    - With visual studio open, navigate to the home directory and find the `testnet-solana-wallet` folder. 
 2.  Open a new terminal by navigating the VS Code taskbar and selecting `Terminal` -> `New Terminal`
 3.  In your new VS Code terminal execute the following command: `cargo init hello_world --lib`. This command builds a new local directory called `hello_world`. 
     -   Let's choose this as our working directory by typing `cd hello_world` into our terminal. 
-4.  Now, in the editor part of VS Code, lets open the 
+4.  Now, in the editor part of VS Code, lets open the file `Cargo.toml`. Add the following file below the `[dependancies]` tag in the `.toml` file
+```
+[lib]
+name = "hello_world"
+crate-type = ["cdylib", "lib"]
+```
+5. sdsd
 
 
   
