@@ -4,7 +4,7 @@
 
 0. Before we can write or deploy a smart contract to Solana, we need to set up our development environment. This tutorial implies that you are using a unix (MacOS or Linux) based machine. It is also implied that you have a package manager installed (brew for MacOS / apt for Linux). This tutorial will use brew but any brew command can be executed on Linux by replacing `brew` with `sudo apt` in your command. 
 
-    - Lets make sure our dependancies are in working order. Run the comands `brew install nvm`, `brew install yarn` and `brew install node` in succession. Follow any additional installation steps. Also ensure you have a fresh installation of Phantom Wallet in your prefered browser. 
+    - Lets make sure our dependancies are in working order. Run the comands `brew install nvm`, `brew install yarn` and `brew install node` in succession. Follow any additional installation steps. Also ensure you have a fresh installation of Phantom Wallet in your prefered browser. (https://phantom.app/)
         
 
     - Our first step is to install rust, the native programming language and suite of tools that Solana utilizes. Rust can be installed by running the following “curl” command in your terminal: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
