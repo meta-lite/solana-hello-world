@@ -14,8 +14,9 @@
         -  Finally, we can now fund our wallet though the devnet faucet by running thr command `solana airdrop 1`
 1.  Next we can proceed with writing and deploying the smart contract. You can choose any IDE for this portion, but I chose Visual Studio Code as it is what the vast majority of users are familiar with. With visual studio open, navigate to the home directory and find the `testnet-solana-wallet` folder. 
 2.  Open a new terminal by navigating the VS Code taskbar and selecting `Terminal` -> `New Terminal`
-3.  In your new VS Code terminal execute the following command: `cargo init hello_world --lib`. This command builds a new local directory called `hello_world`. Let's choose this as our working directory by typing `cd hello_world` into our terminal. 
-4.  
+3.  In your new VS Code terminal execute the following command: `cargo init hello_world --lib`. This command builds a new local directory called `hello_world`. 
+    -   Let's choose this as our working directory by typing `cd hello_world` into our terminal. 
+4.  Now, in the editor part of VS Code, lets open the 
 
 
   
