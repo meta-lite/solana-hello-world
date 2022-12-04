@@ -64,7 +64,8 @@ pub fn process_instruction(
         - Create an account at https://moralis.io for free to generate an API key. After creating an account and completing the mostly self-explainatory "onboarding" process, we can retrieve the API Key. From the page displayed after onboarding, click the "Web3 APIs" button and copy the key. 
         - Naviage back to `.env.local` and add the API key immediately after the `MORALIS_API_KEY=` variable declaration. Be sure to save the file!
 10. As we approach the end of our API setup, we need to add the program ID that we recorded earlier to the `/src/components/templates/helloWorld/HelloWorld.tsx` file located from our `hello_world` directory. Line 19 should display `const programId = '3Adih9H8CheKTKfmmUYtr8cksbwoxvhWzsdupK6MfJAX';`. Replace everything between the single quotation marks with our recorded program ID. 
-    - We will also need to establish a conection with the browser in our local host instance. Run the command `npm install --save @solana/web3.js` in our working direstory to download the required javascript file.
+    - We will also need to establish a conection with the browser in our local host instance. Run the command `npm install --save @solana/web3.js` in our working direstory to download the required javascript file. This sould be the last componet we need to launch our frontend interface and connect our backend smart contract. 
+11. From our terminal run the commands `cd solana-dapp-helloWorld` and `yarn install` to build our frontend application. 
 
 
 
