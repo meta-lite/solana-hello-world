@@ -54,6 +54,19 @@ pub fn process_instruction(
 ```
 7. Now that our contract is written, we need to compile it via cargo and our terminal by running `cargo build-bpf`.
 8. Now that our contract is compiled, its time to deploy it to devnet by running: `solana program deploy ./target/deploy/hello_world.so`. Be sure to record the program ID somewhere safe.
+9. We will be using the following git repo to test our newly deployed contract: https://github.com/johnvsnagendra/solana-smart-contract-helloWorld. Be sure to open it up in a new tab. 
+    - From the Github repo, navigate to the bright green "Code" button. Click the button to display the git link. Press the copy button. 
+    - In our terminal, run the command git clone <LINK> replacing the <> and their contents with the link you just copied from Github. This will pull the contents of this repo into our hello_world directory. There are a couple of edits we need to make before proceeding: 
+        - We must first rename the file `.env.local.example` to `.env.local`. 
+        - Create an account at https://moralis.io for free to generate an API key. After creating an account and completing the mostly self-explainatory "onboarding" process, we can retrieve the API Key. From the page displayed after onboarding, click the "Web3 APIs" button and copy the key. 
+        - Naviage back to `.env.local` and add the API key immediately after the `MORALIS_API_KEY=` variable declaration. Be sure to save the file!
+10. 
+
+
+
+
+
+Spell Check Boi
 
 
   
