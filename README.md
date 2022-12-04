@@ -17,13 +17,38 @@
 2.  Open a new terminal by navigating the VS Code taskbar and selecting `Terminal` -> `New Terminal`
 3.  In your new VS Code terminal execute the following command: `cargo init hello_world --lib`. This command builds a new local directory called `hello_world`. 
     -   Let's choose this as our working directory by typing `cd hello_world` into our terminal. 
-4.  Now, in the editor part of VS Code, lets open the file `Cargo.toml`. Add the following file below the `[dependancies]` tag in the `.toml` file
+4.  Now, in the editor part of VS Code, lets open the file `Cargo.toml`. Add the following file below the `[dependancies]` tag in the `.toml` file. Be sure to save the file after!
 ```
 [lib]
 name = "hello_world"
 crate-type = ["cdylib", "lib"]
 ```
-5. sdsd
+5. Nextly we will add the `solana_program` package to our CLI by running `cargo add solana_program` in the terminal. (This can take multupile tries to get a "happy" response from the crates.io server. If the download stalls out press `ctrl + c` and re-run the command. 
+6. Next navigate to the file located in the directory at `src/lib.rs`. We will paste the code below to replace the contents of the file. Be sure to save the file!
+```
+use solana_program::{
+    account_info::AccountInfo,
+    entrypoint,
+    entrypoint::ProgramResult,
+    pubkey::Pubkey,
+    msg,
+};
+
+entrypoint!(process_instruction);
+
+pub fn process_instruction(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    instruction_data: &[u8]
+) -> ProgramResult {
+
+    msg!("Hello, world!");
+
+    Ok(())
+}
+```
+7. Now that our contract is written, we need to compile it via cargo and our terminal by running `cargo build-bpf`.
+8. Now that our contract is compiled, its time to deploy it to devnet by running: `solana program deploy ./target/deploy/hello_world.so`. Be sure to record the program ID somewhere safe.
 
 
   
