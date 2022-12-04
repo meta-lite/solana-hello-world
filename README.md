@@ -2,7 +2,10 @@
 
 ## Configuring the Devolopment Environment
 
-0. Before we can write or deploy a smart contract to Solana, we need to set up our development environment. This tutorial implies that you are using a unix (MacOS or Linux) based machine. 
+0. Before we can write or deploy a smart contract to Solana, we need to set up our development environment. This tutorial implies that you are using a unix (MacOS or Linux) based machine. It is also implied that you have a package manager installed (brew for MacOS / apt for Linux). This tutorial will use brew but any brew command can be executed on Linux by replacing `brew` with `sudo apt` in your command. 
+
+    - Lets make sure our dependancies are in working order. Run the comands `brew install nvm`, `brew install yarn` and `brew install node` in succession. Follow any additional installation steps. Also ensure you have a fresh installation of Phantom Wallet in your prefered browser. 
+        
 
     - Our first step is to install rust, the native programming language and suite of tools that Solana utilizes. Rust can be installed by running the following “curl” command in your terminal: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
         - A prompt will appear asking you to choose between options `1. proceed with installation`, `2. customize installation` and `3. cancel installation`. Choose option 1 and press return. 
@@ -11,7 +14,7 @@
         - After the installation is complete, run `source "$HOME/.cargo/env"` to configure Solana and Rust as environment varibles in your shell. 
 
     - We now need to setup a local directory to keep things simple and organised. In the terminal run: `mkdir ~/testnet-solana-wallet` to create a new folder in the home directory.
-        - Next, run `solana-keygen new --outfile ~/testnet-solana-wallet/my-keypair.json` to create a new solana wallet. The CLI will prompt you for a password, but for purposes of testing this is best left blank. The output will be the seed phrase, which you should record in a safe place.
+        - Next, run `solana-keygen new --outfile ~/testnet-solana-wallet/my-keypair.json` to create a new solana wallet. The CLI will prompt you for a password, but for purposes of testing this is best left blank. The output will be the seed phrase, which you should record in a safe place. You should also import this seed phrase into your fresh Phantom Wallet extension. 
  
     - Our next step is to point Solana at the devnet cluster. To do this we execute the command `solana config set --url https://api.devnet.solana.com` in the terminal. 
         -  We can now create a ID config file for our wallet by executing `solana-keygen new -o /Users/nickcarp/.config/solana/id.json` in the terminal. 
@@ -60,8 +63,8 @@ pub fn process_instruction(
         - We must first rename the file `.env.local.example` to `.env.local`. 
         - Create an account at https://moralis.io for free to generate an API key. After creating an account and completing the mostly self-explainatory "onboarding" process, we can retrieve the API Key. From the page displayed after onboarding, click the "Web3 APIs" button and copy the key. 
         - Naviage back to `.env.local` and add the API key immediately after the `MORALIS_API_KEY=` variable declaration. Be sure to save the file!
-10. As we approach the end of our API setup, we need to add the program ID that we recorded earlier to the `/src/components/templates/helloWorld/HelloWorld.tsx` file located from our `hello_world` directory. Line 19 should display `const programId = '3Adih9H8CheKTKfmmUYtr8cksbwoxvhWzsdupK6MfJAX';`. Replace everything between the single quotation marks with our recorded program ID. ----- what next
-need to add node and web3.js to directory also yarn, nvm and a fresh phantom wallet extension. 
+10. As we approach the end of our API setup, we need to add the program ID that we recorded earlier to the `/src/components/templates/helloWorld/HelloWorld.tsx` file located from our `hello_world` directory. Line 19 should display `const programId = '3Adih9H8CheKTKfmmUYtr8cksbwoxvhWzsdupK6MfJAX';`. Replace everything between the single quotation marks with our recorded program ID. 
+    - We will also need to establish a conection with the browser in our local host instance. Run the command `npm install --save @solana/web3.js` in our working direstory to download the required javascript file.
 
 
 
