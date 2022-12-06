@@ -76,3 +76,57 @@ Spell Check Boi
 
 
   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+```
+ use solana_sdk::{
+    account::Account,
+    entrypoint,
+    info,
+    program_error::ProgramError,
+    pubkey::Pubkey,
+    system_program,
+    sysvar::clock::Clock,
+};
+
+#[entrypoint]
+fn main(account: &Account, _info: &Info, _clock:  &Clock) -> Result<(), ProgramError> {
+    info!("Meatballs and Pasta Recipe:");
+    info!("Ingredients:");
+    info!("- 1 lb ground beef");
+    info!("- 1/2 cup bread crumbs");
+    info!("- 1/4 cup grated Parmesan cheese");
+    info!("- 1/4 cup milk");
+    info!("- 1 egg");
+    info!("- 1 clove garlic, minced");
+    info!("- 1/2 teaspoon salt");
+    info!("- 1/4 teaspoon black pepper");
+    info!("- 1/4 teaspoon dried oregano");
+    info!("- 1/4 teaspoon dried basil");
+    info!("- 1/4 teaspoon dried parsley");
+    info!("- 1/2 cup olive oil");
+    info!("- 2 cups tomato sauce");
+    info!("- 8 oz pasta");
+    info!("Instructions:");
+    info!("1. In a large bowl, combine the ground beef, bread crumbs, Parmesan cheese, milk, egg, garlic, salt, pepper, oregano, basil, and parsley. Mix well to combine.");
+    info!("2. Roll the mixture into balls about the size of a golf ball and set aside.");
+    info!("3. Heat the olive oil in a large skillet over medium heat. Add the meatballs and cook, turning occasionally, until browned on all sides.");
+    info!("4. Stir in the tomato sauce and bring to a simmer. Reduce the heat to low and simmer, covered, for 15 minutes, or until the meatballs are cooked through.");
+    info!("5. Meanwhile, cook the pasta according to the package instructions.");
+    info!("6. Serve the meatballs and sauce over the cooked pasta.");
+
+    Ok(())
+}
+```
