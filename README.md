@@ -16,7 +16,7 @@
         - Next, run `solana-keygen new --outfile ~/testnet-solana-wallet/my-keypair.json` to create a new solana wallet. The CLI will prompt you for a password, but for purposes of testing this is best left blank. The output will be the seed phrase, which you should record in a safe place. You should also import this seed phrase into your fresh Phantom Wallet extension by clicking "Import Wallet".
  
     - Our next step is to point Solana at the devnet cluster. To do this we execute the command `solana config set --url https://api.devnet.solana.com` in the terminal. 
-        -  We can now create a ID config file for our wallet by executing `solana-keygen new -o /Users/nickcarp/.config/solana/id.json` in the terminal. 
+        -  We can now create a ID config file for our wallet by executing `solana-keygen new -o /Users/<USER>/.config/solana/id.json` in the terminal, replacing <USER> with your local login. 
         -  Finally, we can now fund our wallet though the devnet faucet by running the command `solana airdrop 1`
 
 1. Next we can proceed with writing and deploying the smart contract. You can choose any IDE for this portion, but I chose Visual Studio Code as it is what the vast majority of users are familiar with. 
