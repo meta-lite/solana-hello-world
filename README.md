@@ -13,7 +13,7 @@
         - After the installation is complete, run `source "$HOME/.cargo/env"` to configure Solana and Rust as environment variables in your shell. 
 
     - We now need to setup a local directory to keep things simple and organized. In the terminal run: `mkdir ~/testnet-solana-wallet` to create a new folder in the home directory.
-        - Next, run `solana-keygen new --outfile ~/testnet-solana-wallet/my-keypair.json` to create a new solana wallet. The CLI will prompt you for a password, but for purposes of testing this is best left blank. The output will be the seed phrase, which you should record in a safe place. You should also import this seed phrase into your fresh Phantom Wallet extension. 
+        - Next, run `solana-keygen new --outfile ~/testnet-solana-wallet/my-keypair.json` to create a new solana wallet. The CLI will prompt you for a password, but for purposes of testing this is best left blank. The output will be the seed phrase, which you should record in a safe place. You should also import this seed phrase into your fresh Phantom Wallet extension by clicking "Import Wallet".
  
     - Our next step is to point Solana at the devnet cluster. To do this we execute the command `solana config set --url https://api.devnet.solana.com` in the terminal. 
         -  We can now create a ID config file for our wallet by executing `solana-keygen new -o /Users/nickcarp/.config/solana/id.json` in the terminal. 
